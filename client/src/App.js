@@ -9,6 +9,8 @@ import NoMatch from './components/shared/NoMatch';
 import FetchUser from './components/auth/FetchUser';
 import Dash from './components/shared/Dash';
 import ProtectedRoute from './components/auth/ProtectedRoute';
+import Profile from './components/auth/Profile';
+
 
 const App = () => (
   <>
@@ -20,6 +22,7 @@ const App = () => (
           <ProtectedRoute exact path='/dash' component={Dash} />
           <Route exact path='/login' component={Login} />
           <Route exact path='/register' component={Register} />
+          <ProtectedRoute exact path='/profile' component={Profile} />
           <Route component={NoMatch} />
         </Switch>
       </Container>
